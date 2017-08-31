@@ -170,6 +170,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let destination = segue.destination as? PokemonDetailedVC {
                 if let poke = sender as? Pokemon {
                    destination.pokemon = poke
+                    print("HolAaAA")
                 }
             }
         }

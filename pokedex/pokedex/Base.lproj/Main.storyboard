@@ -138,7 +138,7 @@
                     <connections>
                         <outlet property="collection" destination="Cb6-FL-V62" id="WXg-7A-QVB"/>
                         <outlet property="searchBar" destination="vve-Tq-kfR" id="jvo-kK-6NL"/>
-                        <segue destination="fMA-QW-Uj7" kind="show" identifier="PokemonDetailedVC" id="fx3-Qq-gkw"/>
+                        <segue destination="fMA-QW-Uj7" kind="show" identifier="PokemonDetailedVC" id="Hi6-Hk-NAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
