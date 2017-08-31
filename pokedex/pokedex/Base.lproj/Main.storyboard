@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="trailing" secondItem="N5l-tX-rQE" secondAttribute="trailing" constant="8" id="oUD-6k-aUB"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="vve-Tq-kfR">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="vve-Tq-kfR">
                                 <rect key="frame" x="0.0" y="67" width="414" height="112.33333333333334"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -137,11 +137,50 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="Cb6-FL-V62" id="WXg-7A-QVB"/>
+                        <outlet property="searchBar" destination="vve-Tq-kfR" id="jvo-kK-6NL"/>
+                        <segue destination="fMA-QW-Uj7" kind="show" identifier="PokemonDetailedVC" id="fx3-Qq-gkw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="121.46739130434784"/>
+        </scene>
+        <!--PokemonDetailedVC-->
+        <scene sceneID="SCV-7C-LqZ">
+            <objects>
+                <viewController id="fMA-QW-Uj7" userLabel="PokemonDetailedVC" customClass="PokemonDetailedVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KgC-lX-DlR"/>
+                        <viewControllerLayoutGuide type="bottom" id="OUs-mj-dfb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6TO-J5-lnB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohp-oV-UhD">
+                                <rect key="frame" x="176.66666666666666" y="353" width="60.666666666666686" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60.670000000000002" id="Azz-JI-9Dl"/>
+                                    <constraint firstAttribute="height" constant="30" id="Sow-nu-4Vs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ohp-oV-UhD" firstAttribute="centerY" secondItem="6TO-J5-lnB" secondAttribute="centerY" id="aZE-A6-VEa"/>
+                            <constraint firstItem="Ohp-oV-UhD" firstAttribute="centerX" secondItem="6TO-J5-lnB" secondAttribute="centerX" id="fZT-rt-hau"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="Ohp-oV-UhD" id="QU7-xU-Uli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rY-pa-ony" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="121"/>
         </scene>
     </scenes>
     <resources>
