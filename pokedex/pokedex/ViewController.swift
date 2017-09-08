@@ -32,6 +32,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         musicPlay()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
@@ -55,7 +56,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-    func parsePokemonCSV(){
+    func parsePokemonCSV(){         //parsing and storing objects in an array
         let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")  //specifying the path
         
         do{
@@ -71,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 pokemon.append(pokeObject)
             }
             
-            dump(pokemon)
+            dump(pokemon)           //printing pokemona array
             
         }
         catch let err as NSError{
@@ -170,7 +171,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let destination = segue.destination as? PokemonDetailedVC {
                 if let poke = sender as? Pokemon {
                    destination.pokemon = poke
-                    print("HolAaAA")
+                   
                 }
             }
         }
